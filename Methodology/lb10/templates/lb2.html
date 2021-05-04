@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Lab 2 {% endblock %}</h1>
+    <div class="plots">
+        <img src="{{ url }}" alt="Plots">
+    </div>
+    <div class="chart" id="isosurface">
+        <script>
+            var graphs = {{plot | safe}};
+            Plotly.plot('isosurface',graphs,{});
+        </script>
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Lab 3 {% endblock %}</h1>
+    <div class="plots">
+        <img src="{{ url }}" alt="Plots">
+    </div>
+    <div class="result">
+        <p>Guad: {{ guad }} (+- {{ err }})</p>
+        <p>Newton-Leibniz: {{ nl }}</p>
+    </div>
+{% endblock %}

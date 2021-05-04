@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Lab 9 {% endblock %}</h1>
+    <div class="plots">
+        <img src="{{ url }}" alt="Plots">
+    </div>
+    <div class="result">
+        <p>Gradient Boosting Accuracy: {{ gba }}</p>
+        <p>MLP(sgd) Accuracy: {{ sa }}</p>
+        <p>MLP(lbfgs) Accuracy: {{ la }}</p>
+        <p>Forest(500) Accuracy: {{ fha }}</p>
+        <p>Forest(2000) Accuracy: {{ tha }}</p>
+    </div>
+{% endblock %}

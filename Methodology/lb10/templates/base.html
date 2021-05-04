@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="{{ url_for('home')}}">Home</a>
+        <a class="navbar-brand" href="{{ url_for('lb1')}}">Lb 1</a>
+        <a class="navbar-brand" href="{{ url_for('lb2')}}">Lb 2</a>
+        <a class="navbar-brand" href="{{ url_for('lb3')}}">Lb 3</a>
+        <a class="navbar-brand" href="{{ url_for('lb4')}}">Lb 4</a>
+        <a class="navbar-brand" href="{{ url_for('lb5')}}">Lb 5</a>
+        <a class="navbar-brand" href="{{ url_for('lb6')}}">Lb 6</a>
+        <a class="navbar-brand" href="{{ url_for('lb7')}}">Lb 7</a>
+        <a class="navbar-brand" href="{{ url_for('lb8')}}">Lb 8</a>
+        <a class="navbar-brand" href="{{ url_for('lb9')}}">Lb 9</a>
+    </nav>
+    <div class="container">
+        {% block content %} {% endblock %}
+    </div>
+  </body>
+</html>
